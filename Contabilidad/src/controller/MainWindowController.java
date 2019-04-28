@@ -4,11 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import model.Container;
 
 public class MainWindowController {
 
 	@FXML
-    private Button ERButton;
+    private Button nextButton;
 
     @FXML
     private TextField ActivosTextField;
@@ -20,22 +21,38 @@ public class MainWindowController {
     private TextField PatrimonioTextField;
 
     @FXML
-    private Button BGButton;
-
-    @FXML
     private TextField GastosTextField;
 
     @FXML
     private TextField IngresosTextField;
 
     @FXML
-    void BGClicked(ActionEvent event) {
+    void nextClicked(ActionEvent event) {
 
+    checkInvariants();
+    	
+    Container container = read();
+    	
     }
-
-    @FXML
-    void ERClicked(ActionEvent event) {
-
+    
+    public void checkInvariants() {
+    	
+    	
+    	
     }
-	
+    
+    public Container read() {
+    	
+    	Container conta = new Container();
+    	 
+    	conta.addAnActive(ActivosTextField.getText());
+    	conta.addAPassive(PasivosTextField.getText());
+    	conta.addAHeritage(PatrimonioTextField.getText());
+    	conta.addAnEntry(IngresosTextField.getText());
+    	conta.addASpend(GastosTextField.getText());
+    	
+    	return conta;
+    }
+    
+    
 }
