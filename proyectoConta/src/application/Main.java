@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,6 +21,23 @@ public class Main extends Application {
 		window.setScene(scene);
 		window.setTitle("Chequeo de balance");
 		window.show();
+		
+	}
+	
+    public static void anotherScreen() {
+    	try {
+			FXMLLoader loader=new FXMLLoader();
+			loader.setLocation(Main.class.getResource("BGWindow.fxml"));
+			BorderPane root2 = (BorderPane)loader.load();
+			Stage stage=new Stage();
+			stage.setTitle("Balance general");
+			Scene scene2=new Scene(root2);
+			stage.setScene(scene2);
+			stage.show();		
+			
+		}catch(Exception e) {
+			e.fillInStackTrace();
+		}
 	}
 	
 	public static void main(String[] args) {
