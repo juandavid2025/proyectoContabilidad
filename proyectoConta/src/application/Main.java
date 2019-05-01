@@ -2,16 +2,25 @@ package application;
 	
 import java.io.IOException;
 
+import controller.MainWindowController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.Container;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
+	
+	private static Container c;
+	
+	public Main() {
+		c = new Container();
+	}
+	
 	@Override
 	public void start(Stage window) throws IOException {
 		FXMLLoader loader = new FXMLLoader();
@@ -38,6 +47,10 @@ public class Main extends Application {
 		}catch(Exception e) {
 			e.fillInStackTrace();
 		}
+	}
+    
+    public static Container getContainer() {
+		return c;
 	}
 	
 	public static void main(String[] args) {

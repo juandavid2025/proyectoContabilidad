@@ -46,11 +46,11 @@ public class MainWindowController {
     	
     	Container conta = new Container();
     	 
-    	conta.addAnActive(ActivosTextField.getText());
-    	conta.addAPassive(PasivosTextField.getText());
-    	conta.addAHeritage(PatrimonioTextField.getText());
-    	conta.addAnEntry(IngresosTextField.getText());
-    	conta.addASpend(GastosTextField.getText());
+    	Main.getContainer().addAnActive(ActivosTextField.getText());
+    	Main.getContainer().addAPassive(PasivosTextField.getText());
+    	Main.getContainer().addAHeritage(PatrimonioTextField.getText());
+    	Main.getContainer().addAnEntry(IngresosTextField.getText());
+    	Main.getContainer().addASpend(GastosTextField.getText());
     	
     	return conta;
     }
@@ -65,11 +65,11 @@ public class MainWindowController {
     	PatrimonioTextField.setText("CapitalSocial 10800,Ultilidad 882,UtilidadAcumulada 312");
     	IngresosTextField.setText("Ventas 12330,CostoDeVentas -84969");
     	GastosTextField.setText("Financieros 108,Sueldos 774,Depreciacion 990,Publicidad 1080");
-    	conta.addAnActive(ActivosTextField.getText());
-    	conta.addAPassive(PasivosTextField.getText());
-    	conta.addAHeritage(PatrimonioTextField.getText());
-    	conta.addAnEntry(IngresosTextField.getText());
-    	conta.addASpend(GastosTextField.getText());
+    	Main.getContainer().addAnActive(ActivosTextField.getText());
+    	Main.getContainer().addAPassive(PasivosTextField.getText());
+    	Main.getContainer().addAHeritage(PatrimonioTextField.getText());
+    	Main.getContainer().addAnEntry(IngresosTextField.getText());
+    	Main.getContainer().addASpend(GastosTextField.getText());
     	 
     	return conta;
     }

@@ -26,4 +26,8 @@ public class Account {
 		this.value = value;
 	}
 	
+	public String toString() {
+		return name+" "+value; 
+	}
+	
 }
