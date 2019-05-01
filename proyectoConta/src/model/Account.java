@@ -27,7 +27,7 @@ public class Account {
 	}
 	
 	public String toString() {
-		return name+" "+value; 
+		return value+" "; 
 	}
 	
 }

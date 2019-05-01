@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BGWindowController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BGWindowController">
    <center>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <FlowPane prefHeight="413.0" prefWidth="573.0" BorderPane.alignment="CENTER">
          <children>
             <ListView fx:id="active" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="activeV" prefHeight="200.0" prefWidth="80.0" />
             <ListView fx:id="passive" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="passiveV" prefHeight="200.0" prefWidth="80.0" />
+            <Label prefHeight="17.0" prefWidth="280.0" />
+            <ListView fx:id="heritage" prefHeight="210.0" prefWidth="200.0" />
+            <ListView fx:id="heritageV" prefHeight="200.0" prefWidth="80.0" />
          </children>
       </FlowPane>
    </center>
+   <top>
+      <VBox prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="571.0" text="a 31 de enero del 2019" />
+            <HBox prefHeight="37.0" prefWidth="571.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="282.0" text="Activos" />
+                  <Label prefHeight="17.0" prefWidth="174.0" text="Pasivos" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
 </BorderPane>
